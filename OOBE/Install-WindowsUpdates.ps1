@@ -16,3 +16,5 @@ if ($UpdateWindows) {
     Write-Host -ForegroundColor DarkCyan 'Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -IgnoreReboot'
     Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -IgnoreReboot -NotTitle 'Malicious','Preview'
 }
+
+## Test mode
