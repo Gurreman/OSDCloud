@@ -13,7 +13,6 @@ $Global:MyOSDCloud = [ordered]@{
     WindowsUpdateDrivers = [bool]$false
     WindowsDefenderUpdate = [bool]$true
     SetTimeZone = [bool]$false
-    ClearDiskConfirm = [bool]$False
     ShutdownSetupComplete = [bool]$false
     SyncMSUpCatDriverUSB = [bool]$false
     CheckSHA1 = [bool]$false
@@ -23,7 +22,7 @@ $Global:MyOSDCloud = [ordered]@{
 Write-Host "Starting OSDCloud" -ForegroundColor Green
 write-host "Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage"
 
-Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage -SkipODT -ZTI
+Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage -SkipODT
 
 
 
