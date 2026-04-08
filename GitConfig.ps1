@@ -10,6 +10,7 @@ $Global:MyOSDCloud = [ordered]@{
     RecoveryPartition = [bool]$true
     OEMActivation = [bool]$True
     WindowsUpdate = [bool]$false
+    ClearDiskConfirm = [bool]$True
     WindowsUpdateDrivers = [bool]$false
     WindowsDefenderUpdate = [bool]$true
     SetTimeZone = [bool]$false
@@ -19,10 +20,10 @@ $Global:MyOSDCloud = [ordered]@{
 }
 
 #Launch OSDCloud
-Write-Host "Starting OSDCloud" -ForegroundColor Green
+Write-Host "Starting OSDCloud Strålfors edition!" -ForegroundColor Orange
 write-host "Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage"
 
-Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage -SkipODT
+Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage -SkipODT -ZTI
 
 
 
