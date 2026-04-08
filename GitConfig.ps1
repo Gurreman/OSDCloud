@@ -20,10 +20,10 @@ $Global:MyOSDCloud = [ordered]@{
 }
 
 #Launch OSDCloud
-Write-Host "Starting OSDCloud Strålfors edition!" -ForegroundColor Green
+Write-Host "Starting OSDCloud Stralfors edition!" -ForegroundColor Green
 write-host "Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage"
 
-Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage -SkipODT
+Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage -SkipODT -ZTI
 
 
 
