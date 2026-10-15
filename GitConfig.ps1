@@ -1,3 +1,8 @@
+#Force English culture so date parsing in OSD works under a Swedish WinPE locale
+$culture = [System.Globalization.CultureInfo]::GetCultureInfo('en-US')
+[System.Threading.Thread]::CurrentThread.CurrentCulture = $culture
+[System.Threading.Thread]::CurrentThread.CurrentUICulture = $culture
+
 #Variables to define the Windows OS / Edition etc to be applied during OSDCloud
 $OSName = 'Windows 11 26H2 x64'
 $OSEdition = 'Pro'
@@ -21,26 +26,6 @@ $Global:MyOSDCloud = [ordered]@{
 
 #Launch OSDCloud
 Write-Host "Starting OSDCloud Stralfors edition!" -ForegroundColor Green
-write-host "Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage"
+Write-Host "Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage"
 
 Start-OSDCloud -OSName $OSName -OSEdition $OSEdition -OSActivation $OSActivation -OSLanguage $OSLanguage -SkipODT -ZTI
-
-
-
-
-
-#Start-OSDCloud -OSName 'Windows 11 25H2 x64' -OSLanguage en-us -OSEdition Pro -OSActivation Retail -SkipODT -ZTI -Restart
-# Removed
-#  -CloudDriver Dell,USB
-
-
-
-
-
-
-
-
-
-
-
-
